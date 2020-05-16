@@ -1,0 +1,25 @@
+From 9b991bc3527d8fb8ebe999b4329cffbbd9c27053 Mon Sep 17 00:00:00 2001
+From: "Robert T. McGibbon" <rmcgibbo@gmail.com>
+Date: Sat, 16 May 2020 17:59:34 -0400
+Subject: [PATCH 1/1] Fix to compile for OSX
+
+---
+ src/analyze/bond_orders.cxx | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/analyze/bond_orders.cxx b/src/analyze/bond_orders.cxx
+index d1c0107..a9a84c6 100644
+--- a/src/analyze/bond_orders.cxx
++++ b/src/analyze/bond_orders.cxx
+@@ -535,7 +535,7 @@ namespace desres { namespace msys {
+ 
+     long BondOrderAssigner::seconds_until_deadline() {
+         std::chrono::system_clock::time_point now = std::chrono::system_clock::now();
+-        long seconds = std::max(1L, std::chrono::duration_cast<std::chrono::seconds>(_deadline - now).count());
++        long seconds = std::max(1L, static_cast<long>(std::chrono::duration_cast<std::chrono::seconds>(_deadline - now).count()));
+         return seconds;
+     }
+ 
+-- 
+2.20.1
+
