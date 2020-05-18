@@ -1,6 +1,6 @@
-From b469fa3b688c785774f828f3d346bc39d8c07506 Mon Sep 17 00:00:00 2001
+From 4be96aab3f2d8de3b629463a136af6343b8bbb2d Mon Sep 17 00:00:00 2001
 From: "Robert T. McGibbon" <rmcgibbo@gmail.com>
-Date: Mon, 18 May 2020 13:48:48 -0400
+Date: Mon, 18 May 2020 14:18:42 -0400
 Subject: [PATCH 1/1] Add 38 and 39 to sconsutils
 
 ---
@@ -8,10 +8,10 @@ Subject: [PATCH 1/1] Add 38 and 39 to sconsutils
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/external/sconsutils.py b/external/sconsutils.py
-index 6d95e53..bcd0792 100644
+index 6d95e53..7ae1e0d 100644
 --- a/external/sconsutils.py
 +++ b/external/sconsutils.py
-@@ -287,8 +287,7 @@ def generate(env):
+@@ -287,7 +287,7 @@ def generate(env):
      opts.Add("OBJDIR", "build product location", 'build')
      opts.Add("PREFIX", "installation location")
  
