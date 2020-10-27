@@ -1,6 +1,6 @@
 {% set name = "desres-msys" %}
-{% set version = "1.7.299" %}
-{% set sha1 = "610d7b5fabc6c75dfa355fae52fd95393e9409d6" %}
+{% set version = "1.7.309" %}
+{% set sha1 = "ebf8fd4176f5d7528d1fcc4e80e8e0abcfeada11" %}
 
 package:
   name: {{ name|lower }}
