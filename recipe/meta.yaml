@@ -16,7 +16,7 @@ source:
     - 0001-Fix-to-compile-for-OSX.patch
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
 
 requirements:
