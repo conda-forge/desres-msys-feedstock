@@ -16,7 +16,7 @@ source:
     - 0001-Fix-to-compile-for-OSX.patch
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win]
 
 requirements:
@@ -28,14 +28,13 @@ requirements:
     - scons
     - python
     - numpy
-    - boost >=1.67.0
+    - libboost-python-devel >=1.67.0
     - lpsolve55 ==5.5
     - inchi ==1.05
     - pybind11
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - {{ pin_compatible('boost') }}
     - lpsolve55 ==5.5
     - inchi ==1.05
 
