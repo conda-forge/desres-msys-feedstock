@@ -16,12 +16,13 @@ source:
     - 0001-Fix-to-compile-for-OSX.patch
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win]
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
 
   host:
@@ -34,7 +35,6 @@ requirements:
     - pybind11
   run:
     - python
-    - {{ pin_compatible('numpy') }}
     - {{ pin_compatible('boost') }}
     - lpsolve55 ==5.5
     - inchi ==1.05
